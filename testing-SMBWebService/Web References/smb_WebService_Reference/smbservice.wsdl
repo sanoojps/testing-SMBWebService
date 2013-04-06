@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertSystemInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUserAccessRights" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pMacID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProcessorAndClockSpeed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pRAM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDefaultBrowser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSystemBootupTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDefaultPrinter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOSArchitecture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pVideoCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSoundCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDXVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSystemPartition" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumberOfPartitions" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSystemManufacturer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPCName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAppVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSystemInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertSystemInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSMBStatusLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIssueDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIssueTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPCName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pMacID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEventName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFunctionRunStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIssueStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSMBStatusLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertSMBStatusLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyMacID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMacID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyMacIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyMacIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSystemInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMacID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSystemInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSystemInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAgentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="smbID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertSystemInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSystemInfo" />
+  </wsdl:message>
+  <wsdl:message name="InsertSystemInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSystemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSMBStatusLogSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSMBStatusLog" />
+  </wsdl:message>
+  <wsdl:message name="InsertSMBStatusLogSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSMBStatusLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyMacIDSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyMacID" />
+  </wsdl:message>
+  <wsdl:message name="VerifyMacIDSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyMacIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAgent" />
+  </wsdl:message>
+  <wsdl:message name="CheckAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClient" />
+  </wsdl:message>
+  <wsdl:message name="GetClientSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMBServiceSoap">
+    <wsdl:operation name="InsertSystemInfo">
+      <wsdl:input message="tns:InsertSystemInfoSoapIn" />
+      <wsdl:output message="tns:InsertSystemInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSMBStatusLog">
+      <wsdl:input message="tns:InsertSMBStatusLogSoapIn" />
+      <wsdl:output message="tns:InsertSMBStatusLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyMacID">
+      <wsdl:input message="tns:VerifyMacIDSoapIn" />
+      <wsdl:output message="tns:VerifyMacIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemInfo">
+      <wsdl:input message="tns:GetSystemInfoSoapIn" />
+      <wsdl:output message="tns:GetSystemInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAgent">
+      <wsdl:input message="tns:CheckAgentSoapIn" />
+      <wsdl:output message="tns:CheckAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <wsdl:input message="tns:GetClientSoapIn" />
+      <wsdl:output message="tns:GetClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMBServiceSoap" type="tns:SMBServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertSystemInfo">
+      <soap:operation soapAction="http://tempuri.org/InsertSystemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSMBStatusLog">
+      <soap:operation soapAction="http://tempuri.org/InsertSMBStatusLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyMacID">
+      <soap:operation soapAction="http://tempuri.org/VerifyMacID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSystemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAgent">
+      <soap:operation soapAction="http://tempuri.org/CheckAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap:operation soapAction="http://tempuri.org/GetClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMBServiceSoap12" type="tns:SMBServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertSystemInfo">
+      <soap12:operation soapAction="http://tempuri.org/InsertSystemInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSMBStatusLog">
+      <soap12:operation soapAction="http://tempuri.org/InsertSMBStatusLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyMacID">
+      <soap12:operation soapAction="http://tempuri.org/VerifyMacID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSystemInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAgent">
+      <soap12:operation soapAction="http://tempuri.org/CheckAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap12:operation soapAction="http://tempuri.org/GetClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://tempuri.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMBService">
+    <wsdl:port name="SMBServiceSoap" binding="tns:SMBServiceSoap">
+      <soap:address location="http://59.163.204.32:82/smbservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMBServiceSoap12" binding="tns:SMBServiceSoap12">
+      <soap12:address location="http://59.163.204.32:82/smbservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
